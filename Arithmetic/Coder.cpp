@@ -44,7 +44,7 @@ void arif(std::map<char, float[2]>& m)
     char simb, zsimb = 0;
     ifstream inp("D:/in.txt");
     ofstream code("D:/out.txt");
-    ofstream posled("D:/posled.txt");
+    ofstream posled("D:/posl.txt");
     double high = 0, low = 0, ol = 0, oh = 0;
     int i = 0, kb;
     map<char, float[2]>::iterator it;
@@ -53,7 +53,7 @@ void arif(std::map<char, float[2]>& m)
     inp.get(simb);
     while (inp) {
         vec1.clear();
-        int pos = 1;
+        int pos = 1;//сколько байт за раз
         kb = 0;
         it = m.find(simb);
         low = m[it->first][0];
@@ -73,6 +73,7 @@ void arif(std::map<char, float[2]>& m)
         posled << pos << ' ';
         i = 7;
         int byte = 0;
+        //кодируем и заносим 0(если получилось на байт меньше)
         for (int j = 0; j < vec.size(); j++)
         {
             zsimb |= vec[j] << i;
