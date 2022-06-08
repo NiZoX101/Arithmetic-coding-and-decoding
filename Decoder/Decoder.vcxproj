@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{8ae8c463-4ea3-45bb-a2f2-961a0a5a7b66}</ProjectGuid>
-    <RootNamespace>Arithmetic</RootNamespace>
+    <ProjectGuid>{23caeedd-1530-49c5-a9a1-6999fb001a9f}</ProjectGuid>
+    <RootNamespace>Decoder</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,7 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Coder.cpp" />
+    <ClCompile Include="..\Arithmetic\Decoder.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
