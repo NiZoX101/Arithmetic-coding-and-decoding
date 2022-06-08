@@ -98,13 +98,13 @@ int main()
     map<char, float[2]> mapa;
     map<char, float[2]>::iterator it;
     for (i = 0; i < 256; i++) alf[i] = 0;
-    ifstream a("D:/in.txt"); ofstream aa("D:/chast.txt");
+    ifstream inpe("D:/in.txt"); ofstream chastot("D:/chast.txt");
 
-    a.get(x);
-    while (a) 
+    inpe.get(x);
+    while (inpe) 
     {
         alf[(int)x]++; 
-        a.get(x); 
+        inpe.get(x); 
         num++;
     }
     for (i = 0; i < 256; i++) 
@@ -112,9 +112,9 @@ int main()
         if (alf[i] != 0)
         {
             Node* r = new Node; r->key = (char)i; r->p = alf[i] / num;
-            aa << ' '; 
-            aa << r->key; 
-            aa << alf[i];
+            chastot << ' '; 
+            chastot << r->key; 
+            chastot << alf[i];
             l.push_back(r);
         }
     }
@@ -127,5 +127,5 @@ int main()
         mapa[(*j)->key][1] = high;
     }
     arif(mapa);
-    a.close(); aa.close();
+    inpe.close(); chastot.close();
 }
